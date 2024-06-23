@@ -1,0 +1,9 @@
+button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.workout-list li {
+  margin: 20px;
+}

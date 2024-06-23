@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import "./WorkoutDetails.css";
 
 const WorkoutDetails = ({ workoutList }) => {
   const { id } = useParams();

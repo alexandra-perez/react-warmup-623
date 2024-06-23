@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import './CreateWorkout.css';
 
 const CreateWorkout = ({ addWorkout, workoutList, setWorkoutList }) => {
   const navigate = useNavigate();
@@ -24,7 +24,7 @@ const CreateWorkout = ({ addWorkout, workoutList, setWorkoutList }) => {
       calories: '',
     });
     // console.log(workoutList)
-    navigate("/workouts")
+    navigate('/workouts');
   };
 
   return (

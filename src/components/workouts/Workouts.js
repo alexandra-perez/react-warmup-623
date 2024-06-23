@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import './Workouts.css';
 
 const Workouts = ({ workoutList, setWorkoutList }) => {
   const [toggle, setToggle] = useState(false);
@@ -14,16 +15,16 @@ const Workouts = ({ workoutList, setWorkoutList }) => {
       ? workoutList.sort((a, b) => a.calories - b.calories)
       : workoutList.sort((a, b) => b.calories - a.calories);
 
-    setWorkoutList(result)
+    setWorkoutList(result);
   };
 
   return (
     <div>
       <button onClick={handleClick}>
-        Sort By Calories Burned ({toggle ? 'Ascending' : 'Descending'})
+        Sort by Calories Burned ({toggle ? 'Ascending' : 'Descending'})
       </button>
       <h2>Workout List</h2>
-      <ul>
+      <ul className="workout-list">
         {workoutList.map((workout) => (
           <li key={workout.id}>
             <Link to={`/workouts/${workout.id}`}>
